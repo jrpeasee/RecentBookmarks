@@ -1,2 +1,0 @@
-# RecentBookmarks
-Chrome Extension
