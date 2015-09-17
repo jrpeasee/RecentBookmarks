@@ -1,4 +1,5 @@
-(function (window) {
+$(document).ready(function () {
+
 
 	var viewTree = {
 		init: function(){
@@ -7,12 +8,23 @@
 
 		getRecent: function(){
 
-			var recentList = document.getElementById('recentlist');
+			var recentList = $("#recentlist");
 			var tree = document.getElementById('tree');
 
+			var deleteBookmark = function(link) {
+		      var id;
+		        id = link.attr('id');
+		        chrome.bookmarks.remove(id, function() {
+		         	link.parent().slideUp(function() {
+		              $(this).remove();
+		            });
+		        });
+		    };
 		
 
-			 
+			 var getBookmarks = function(){
+
+
 
 			chrome.bookmarks.getRecent( 10, function(tree){
 
@@ -23,17 +35,35 @@
 					var date = new Date(recent.dateAdded);
 					var dateTrim = date.toString().slice(0,15);
 					var favicon = 'https://www.google.com/s2/favicons?domain=' + u;
-					var recentUrl = '<img src="' + favicon + '"' + '>' + recent.url;
-					var li = document.createElement('li');
+					var favElement = '<img src="' + favicon + '"' + '>'
+					var li = $('<li></li>');
+					var $link = $('<a href="#" class="link"></a>');
 					var date = document.createElement('span');
-					li.innerHTML = recentUrl;
-					li.appendChild(date);
+					$link.innerHTML = recent.title;
+					$link.attr('id', recent.id);
+          			$link.attr('href', recent.url);
+          			$link.append(favElement);
+          			$link.append(date);
 					date.innerHTML = dateTrim;
-					recentList.appendChild(li);
+					recentList.append(li);
+					li.append($link);
+
+					$link.on('click', function(e) {
+			            e.preventDefault();
+			            e.stopImmediatePropagation();
+			             deleteBookmark($link);
+			          });
+
+					
 				});
 				
 			});
+			}; /*end of getBookmarks */
+			getBookmarks();
 		},
+
+
+		
 
 		
 
@@ -45,4 +75,4 @@
 
 	viewTree.init();
 	 
-})(window);
+});
