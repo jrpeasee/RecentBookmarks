@@ -1,0 +1,41 @@
+.titleOne{
+	font-size: 2.5em;
+	color: #292929;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+	font-family: 'Maven Pro';
+}
+
+body{
+	width: 400px;
+	height: 100%;
+	font-family: 'Maven Pro' !important;
+}
+
+
+.btnMark{
+	background-color: #fff;
+	box-shadow: none !important;
+	border-left: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	border-right: 0px;
+	text-align: left;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.8em !important;
+}
+
+#allBooks{
+	border-bottom: 2px solid #22A7F0
+}
+#recentBooks{
+	border-bottom: 2px solid #BE90D4
+}
+
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}

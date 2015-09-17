@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Caaaarbs",
+	"version": "1.0",
+	"description": "Paleo's best friend.",
+
+    "browser_action": {
+    "default_icon": "images/carbs128.png",
+    "default_popup": "popup.html"
+    },
+    "permissions": [
+          "bookmarks", "storage"
+    ]
+}
