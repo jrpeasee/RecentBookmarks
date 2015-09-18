@@ -1,11 +1,11 @@
 {
 	"manifest_version": 2,
-	"name": "Caaaarbs",
+	"name": "Bookmark Cleaner",
 	"version": "1.0",
-	"description": "Paleo's best friend.",
+	"description": "Lets delete 15 most recent bookmarks",
 
     "browser_action": {
-    "default_icon": "images/carbs128.png",
+    "default_icon": "images/bookmark.png",
     "default_popup": "popup.html"
     },
     "permissions": [

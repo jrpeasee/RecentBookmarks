@@ -1,10 +1,6 @@
-.titleOne{
-	font-size: 2.5em;
-	color: #292929;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-align: center;
-	font-family: 'Maven Pro';
+
+html{
+	margin-top: 0px;
 }
 
 body{
@@ -12,30 +8,85 @@ body{
 	height: 100%;
 	font-family: 'Maven Pro' !important;
 }
-
-
-.btnMark{
-	background-color: #fff;
-	box-shadow: none !important;
-	border-left: 0px;
-	border-top: 0px;
-	border-bottom: 0px;
-	border-right: 0px;
-	text-align: left;
-    font-size: 1em !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.08em !important;
-    line-height: 1.8em !important;
+ul { 
+	margin: 0;
+	padding: 0; 
+	margin-bottom: 50px;
 }
 
-#allBooks{
-	border-bottom: 2px solid #22A7F0
+.fa-times{
+	float: right;
 }
-#recentBooks{
-	border-bottom: 2px solid #BE90D4
+.link{	
+	font-weight: 500;
+	color: #2980b9;
+}
+a:hover{
+	color:#65e5ff;
+}
+
+.fa-times{
+	color: #D32F2F;
+	margin-top: 5px;
+	font-size: 20px;
+	border-radius: 50%;
+}
+
+.fa-times:hover{
+	
+	
+}
+
+.linkBlock{
+	padding-left: 10px;
+	font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    line-height: 1.8em;
+}
+li{	
+
+	padding: 5px 5px;
+	list-style: none;
+	line-height: 20px;
+	
+
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+.date{
+	padding-left: 30px;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+img{
+	padding-right: 5px;
 }
 
 
-:focus {
-    outline: -webkit-focus-ring-color auto 0px;
+#bookmark-manager{
+	padding-left: 20px;
+	background-color: #65e5ff;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 900;
+}
+#bookmark-manager>p{
+	margin-top: 15px;
+}
+
+#bookmark-link{
+	color: #fff;
+}
+a:focus {
+    outline: none;
+    outline: none;
 }
