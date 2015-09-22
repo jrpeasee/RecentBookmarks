@@ -9,6 +9,6 @@
     "default_popup": "popup.html"
     },
     "permissions": [
-          "bookmarks", "storage"
+          "bookmarks", "storage" , "<all_urls>"
     ]
 }

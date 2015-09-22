@@ -25,6 +25,19 @@ $(document).ready(function () {
 
 			var getBookmarks = function(){
 
+				$('#bookmark-link').on('click', function(e) {
+				            e.preventDefault();
+
+				              chrome.tabs.update({
+				                url: "chrome://bookmarks/"
+				              });
+
+				              chrome.tabs.create({
+				                url: "chrome://bookmarks/"
+				              });
+
+
+			    });
 				chrome.bookmarks.getRecent( 15, function(tree){
 
 					this.children = tree;
@@ -56,6 +69,7 @@ $(document).ready(function () {
 						p.append(dateTrim);
 						span.append($link);
 						span.append($close);
+
 
 						$close.on('click', function(e) {
 							
