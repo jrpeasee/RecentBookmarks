@@ -28,10 +28,6 @@ $(document).ready(function () {
 				$('#bookmark-link').on('click', function(e) {
 				            e.preventDefault();
 
-				              chrome.tabs.update({
-				                url: "chrome://bookmarks/"
-				              });
-
 				              chrome.tabs.create({
 				                url: "chrome://bookmarks/"
 				              });
