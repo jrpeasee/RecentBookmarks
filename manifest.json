@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Bookmark Cleaner",
-	"version": "1.1",
+	"version": "1.2",
 	"description": "Lets delete 15 most recent bookmarks",
 
     "browser_action": {
