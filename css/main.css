@@ -86,6 +86,9 @@ img{
 #bookmark-link{
 	color: #fff;
 }
+#recentlist{
+	padding-right:5%;
+}
 a:focus {
     outline: none;
     outline: none;
