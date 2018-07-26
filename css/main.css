@@ -7,22 +7,38 @@ body{
 	width: 400px;
 	height: 100%;
 	font-family: 'Maven Pro' !important;
+	background-color: #f9f9f9;
 }
 ul { 
 	margin: 0;
 	padding: 0; 
 	margin-bottom: 50px;
 }
+#headMessage h1{
+	text-align: center;
+	font-size:13px;
+	text-transform:uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 10%;
+    margin-top: 10%;
+    color:#82ccdd;
+}
 
+.fa-sun{
+	color: #ffeaa7;
+}
 .fa-times{
 	float: right;
 }
 .link{	
 	font-weight: 500;
-	color: #2980b9;
+	color: #82ccdd;
+	text-transform: uppercase;
+	font-size:11px;
+	letter-spacing: 2px;
 }
 a:hover{
-	color:#65e5ff;
+	color:#c8d6e5;
 }
 
 .fa-times{
@@ -36,7 +52,9 @@ a:hover{
 	
 	
 }
-
+#recentlist li{
+	margin:10px 5px;
+}
 .linkBlock{
 	padding-left: 10px;
 	font-size: 1em;
@@ -44,6 +62,11 @@ a:hover{
     letter-spacing: 0.08em;
     line-height: 1.8em;
 }
+
+.linkBlock img{
+	padding-right:10px;
+}
+
 li{	
 
 	padding: 5px 5px;
@@ -64,6 +87,9 @@ li{
 	text-transform: uppercase;
 	font-size: 10px;
 	font-weight: 500;
+	letter-spacing: 2px;
+	color:#fff;
+	opacity: 0.8;
 }
 
 img{
@@ -72,8 +98,8 @@ img{
 
 
 #bookmark-manager{
-	padding-left: 20px;
-	background-color: #65e5ff;
+	padding-left: 0px;
+	background-color: #82ccdd;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
@@ -81,15 +107,28 @@ img{
 }
 #bookmark-manager>p{
 	margin-top: 15px;
+    font-size: 12px;
+    width: 46%;
 }
 
 #bookmark-link{
 	color: #fff;
 }
 #recentlist{
-	padding-right:5%;
+	padding: 0px 10px 0 5px;
+	min-height: calc(100vh - 70px);
+}
+#deleteAllBtn{
+	
+}
+#deleteAllBtn:hover{
+	color: red;
 }
 a:focus {
     outline: none;
     outline: none;
+}
+
+.navbar p{
+	display:inline-block;
 }
