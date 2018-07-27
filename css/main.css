@@ -48,10 +48,7 @@ a:hover{
 	border-radius: 50%;
 }
 
-.fa-times:hover{
-	
-	
-}
+
 #recentlist li{
 	margin:10px 5px;
 }
@@ -88,7 +85,7 @@ li{
 	font-size: 10px;
 	font-weight: 500;
 	letter-spacing: 2px;
-	color:#fff;
+	color:#222;
 	opacity: 0.8;
 }
 
@@ -118,9 +115,7 @@ img{
 	padding: 0px 10px 0 5px;
 	min-height: calc(100vh - 70px);
 }
-#deleteAllBtn{
-	
-}
+
 #deleteAllBtn:hover{
 	color: red;
 }
