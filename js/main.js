@@ -1,17 +1,8 @@
-$(document).ready(function() {
+
+        (function generateRecent() {
 
 
-    (function viewBookmarks() {
-
-
-        (function init() {
-            generateRecent();
-        })();
-
-        function generateRecent() {
-
-
-            let deleteBookmark = function(link, id) {
+            const deleteBookmark = function(link, id) {
                 //console.log(link);
 
                 chrome.bookmarks.remove(id, function() {
@@ -22,10 +13,10 @@ $(document).ready(function() {
                 });
             };
 
-            let deleteBookmarks = function() {
-                let listItem = $("#recentlist li");
-                let links = $("#recentlist li a");
-                let id = links.attr('id');
+            const deleteBookmarks = function() {
+                const listItem = $("#recentlist li");
+                const links = $("#recentlist li a");
+                const id = links.attr('id');
                 let ids;
                 for (let i = 0; i <= listItem.length - 1; i++) {
                     if (listItem.length === 0) {
@@ -43,7 +34,7 @@ $(document).ready(function() {
             };
 
 
-            let bookmarkManagerLink = function() {
+            const bookmarkManagerLink = function() {
 
                 $('#bookmark-link').on('click', function(e) {
                     e.preventDefault();
@@ -58,23 +49,23 @@ $(document).ready(function() {
 
 
 
-            function getBookmarks() {
+            const getBookmarks = function() {
                 chrome.bookmarks.getRecent(15, function(tree) {
 
                     tree.forEach(function(recent) {
 
-                        let recentList = $("#recentlist");
-                        let u = recent.url;
-                        let title = recent.title.toString().slice(0, 35);
-                        let date = new Date(recent.dateAdded);
-                        let dateTrim = date.toString().slice(0, 15);
-                        let favicon = 'https://www.google.com/s2/favicons?domain=' + u;
-                        let favElement = '<img src="' + favicon + '"' + '>';
-                        let li = $('<li></li>');
-                        let $link = $('<a href="#" target="_blank" class="link"></a>');
-                        let span = $('<span class="linkBlock"></span');
-                        let $close = $('<i class="fa fa-times"></i>');
-                        let p = $('<p class="date"></p>');
+                        const recentList = $("#recentlist");
+                        const u = recent.url;
+                        const title = recent.title.toString().slice(0, 35);
+                        const date = new Date(recent.dateAdded);
+                        const dateTrim = date.toString().slice(0, 15);
+                        const favicon = 'https://www.google.com/s2/favicons?domain=' + u;
+                        const favElement = '<img src="' + favicon + '"' + '>';
+                        const li = $('<li></li>');
+                        const $link = $('<a href="#" target="_blank" class="link"></a>');
+                        const span = $('<span class="linkBlock"></span');
+                        const $close = $('<i class="fa fa-times"></i>');
+                        const p = $('<p class="date"></p>');
                         $link.innerHTML = recent.title;
                         $link.attr('id', recent.id);
                         $link.attr('href', recent.url);
@@ -108,10 +99,8 @@ $(document).ready(function() {
                 }); /*end of getRecent */
             } /*end of getBookmarks */
 
-            getBookmarks();
 
-
-            let deleteAllbutton = document.querySelector("#deleteAllBtn");
+            const deleteAllbutton = document.querySelector("#deleteAllBtn");
 
             deleteAllbutton.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -125,9 +114,5 @@ $(document).ready(function() {
                 }
 
             });
-        } /*end of generateRecent function*/
-
-
-    })(); /*end of viewBookmarks*/
-
-});
+            getBookmarks();
+        })(); /*end of generateRecent function*/
